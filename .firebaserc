@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "firelayer-starter"
+  },
+  "targets": {
+    "firelayer-starter": {
+      "hosting": {
+        "www": [
+          "firelayer-starter"
+        ]
+      }
+    }
+  }
+}

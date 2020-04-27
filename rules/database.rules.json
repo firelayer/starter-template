@@ -1,0 +1,9 @@
+{
+  "rules": {
+    "_SETTINGS": {
+      ".read": true,
+      ".write": false
+    }
+  }
+}
+
