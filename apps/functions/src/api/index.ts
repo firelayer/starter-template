@@ -1,15 +1,16 @@
 import * as express from 'express'
-import { lazyImport } from '@firelayer/core/lib/utils'
 
-const APIv1 = lazyImport('./v1', __dirname)
+const app = express()
 
 export default (req, res) => {
-  const app = express()
-
   app.disable('etag')
 
-  app.use('/api/', APIv1)
-  app.use('/api/v1/', APIv1)
+  // API Versions
+  // Latest
+  app.use('/api', lazy('./v1'))
+
+  // V1
+  app.use('/api/v1', lazy('./v1'))
 
   // Error handling
   app.use((err, req, res, next) => {
@@ -20,4 +21,13 @@ export default (req, res) => {
   })
 
   return app(req, res)
+}
+
+/**
+ * Lazy load package / file
+ *
+ * @param {string} pkg - Package or file name
+ */
+function lazy(pkg: string) {
+  return (...args) => require(pkg).default(...args)
 }

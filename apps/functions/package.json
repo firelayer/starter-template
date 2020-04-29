@@ -11,6 +11,7 @@
     "clean": "rimraf dist",
     "lint": "echo 'not implemented'",
     "logs": "firebase functions:log",
+    "watch": "tsc -w --preserveWatchOutput",
     "serve": "concurrently --kill-others \"tsc -w --preserveWatchOutput\" \"firebase serve --only functions\"",
     "shell": "npm run build && firebase functions:shell"
   },

@@ -4,7 +4,8 @@
 
 <br/>
 
-> Demo [https://firelayer-starter-template.web.app](https://firelayer-starter-template.web.app)
+> Website [https://firelayer-starter-template.web.app](https://firelayer-starter-template.web.app)
+> API [https://firelayer-starter-template.web.app/api](https://firelayer-starter-template.web.app/api)
 
 ## Guide
 

@@ -11,6 +11,15 @@ if (process.env.NODE_ENV !== 'production') {
   }
 }
 
-export const app = admin.initializeApp(firebaseConfig)
+admin.initializeApp(firebaseConfig)
 
-export * from '@firelayer/core/lib/firebase'
+export const { auth, storage } = admin
+export const db = admin.firestore
+export const realtime = admin.database
+export const timestamp = admin.firestore.Timestamp.now
+export const { serverTimestamp } = admin.firestore.FieldValue
+
+export { User } from '@firelayer/core/lib/firebase/user'
+export { Firemodel } from '@firelayer/core/lib/firebase/firestore/models/firemodel'
+
+// export { Firemodel, User } from '@firelayer/core/lib/firebase'
