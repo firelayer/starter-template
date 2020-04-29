@@ -1,12 +1,12 @@
 {
   "projects": {
-    "default": "firelayer-starter"
+    "default": "firelayer-templates"
   },
   "targets": {
-    "firelayer-starter": {
+    "firelayer-templates": {
       "hosting": {
-        "www": [
-          "firelayer-starter"
+        "website": [
+          "firelayer-starter-template"
         ]
       }
     }

@@ -4,7 +4,7 @@
   "private": true,
   "main": "dist/index.js",
   "scripts": {
-    "start": "npm run shell",
+    "start": "npm run dev",
     "build": "npm run clean && tsc",
     "dev": "npm run build && npm run serve",
     "deploy": "firebase deploy --only functions",

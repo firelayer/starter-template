@@ -19,12 +19,13 @@
       "*.log",
       ".gitignore",
       "**/node_modules/**",
+      "**/src/**",
       "tsconfig.json"
     ]
   },
   "hosting": [{
-    "target": "www",
-    "public": "apps/www/dist",
+    "target": "website",
+    "public": "apps/website/public",
     "ignore": [
       "firebase.json",
       "**/.*",
