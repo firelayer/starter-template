@@ -35,6 +35,21 @@
       "source": "/api{,/**}",
       "function": "api"
     }]
+  }, {
+    "target": "admin",
+    "public": "apps/admin/dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [{
+      "source": "/api{,/**}",
+      "function": "api"
+    }, {
+      "source": "**",
+      "destination": "/index.html"
+    }]
   }],
   "emulators": {
     "functions": {

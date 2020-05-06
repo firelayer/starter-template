@@ -1,0 +1,19 @@
+.v-data-table {
+  .actions {
+    visibility: hidden;
+  }
+
+  @include media('xs-only') {
+    .actions {
+      visibility: visible;
+    }
+  }
+
+  tr {
+    &:hover {
+      .actions {
+        visibility: visible;
+      }
+    }
+  }
+}

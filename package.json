@@ -13,9 +13,13 @@
     "reset": "lerna clean --yes && npm run clean",
     "clean": "lerna run --parallel clean",
     "build": "firelayer run \"lerna run build\"",
+    "build:admin": "firelayer run \"cd apps/admin && npm run build\"",
+    "build:functions": "firelayer run \"cd apps/functions && npm run build\"",
+    "build:website": "firelayer run \"cd apps/website && npm run build\"",
     "lint": "lerna run lint --parallel",
     "dev": "firelayer run \"lerna run dev --parallel\"",
     "emulators": "firelayer run \"firebase emulators:start\"",
+    "dev:admin": "firelayer run \"cd apps/admin && npm run dev\"",
     "dev:functions": "firelayer run \"cd apps/functions && npm run dev\"",
     "dev:website": "firelayer run \"cd apps/website && npm run dev\"",
     "test": "lerna run test --parallel"

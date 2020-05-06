@@ -1,0 +1,68 @@
+hr {
+  border-color: #eee;
+  border-width: 0.5px;
+  margin: 12px 0;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 14px 0;
+  letter-spacing: -.015625em;
+}
+
+h2 {
+  font-size: 2.6rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 14px 0;
+  letter-spacing: -.0083333333em;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.4;
+  margin: 14px 0;
+  letter-spacing: normal;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.4;
+  margin: 14px 0;
+  letter-spacing: .0073529412em;
+}
+
+.page-title {
+  display: flex;
+  color: #33334f;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 24px 0 16px 0;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.page {
+  width: 100%;
+  margin-top: 12px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-flex {
+  flex: none !important;
+}
+
+.theme--dark {
+  .page-title {
+    color: lighten($primary, 40%);
+  }
+}

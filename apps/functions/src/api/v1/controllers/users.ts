@@ -9,7 +9,7 @@ router.get('/', async (req, res, next) => {
   try {
     const { limit, nextPageToken } = req.query
     const _limit = parseInt(String(limit)) || 1000
-    const _nextPageToken = String(nextPageToken) || undefined
+    const _nextPageToken = nextPageToken ? String(nextPageToken) : undefined
 
     const listUsersResult = await auth().listUsers(_limit, _nextPageToken)
 
@@ -76,6 +76,30 @@ router.put('/:uid/disabled', async (req, res, next) => {
     const user = new User(req.params.uid)
 
     return res.send(await user.setDisabled(req.body.disabled))
+  } catch (err) {
+    return next(err)
+  }
+})
+
+router.post('/:uid/verification-email', async (req, res, next) => {
+  try {
+    const user = new User(req.params.uid)
+
+    await user.sendVerificationEmail()
+
+    return res.send('ok')
+  } catch (err) {
+    return next(err)
+  }
+})
+
+router.post('/:uid/password-reset', async (req, res, next) => {
+  try {
+    const user = new User(req.params.uid)
+
+    await user.sendPasswordResetEmail()
+
+    return res.send('ok')
   } catch (err) {
     return next(err)
   }

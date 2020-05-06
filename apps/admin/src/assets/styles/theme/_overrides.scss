@@ -1,0 +1,27 @@
+.v-application {
+  .v-breadcrumbs {
+    padding: 10px 0;
+  }
+
+  .v-tabs-items {
+    background-color: transparent !important;
+    padding: 1rem 0;
+  }
+
+  .theme--light {
+    .v-tabs {
+      border-bottom: 1px solid #e6e8ec;
+    }
+
+    .v-input {
+      input::placeholder,
+      textarea::placeholder {
+        color: #cbcfda;
+      }
+    }
+  }
+
+  .theme--dark.v-navigation-drawer {
+    background-color: #19212b;
+  }
+}

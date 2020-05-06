@@ -10,7 +10,17 @@ service cloud.firestore {
     function isListQueryValid() { return request.query.limit <= 15 }
 
     // Helpers for users permissions
-    function isLogged() { return request.auth != null && request.auth.token.email_verified }
+    function isEmailVerified() { return request.auth.token.email_verified }
+    function isLogged() { return request.auth != null }
+    function isAuthValid() { return isLogged() && isEmailVerified() }
     function isSuperAdmin() { return isLogged() && request.auth.token.admin == 1 }
+
+    // Custom Claims Trigger
+    match /_user_metadata/{userId} {
+      function isSelf() { return isLogged() && userId == request.auth.uid; }
+
+      allow read: if isSuperAdmin() || isSelf();
+      allow write: if false;
+    }
   }
 }
