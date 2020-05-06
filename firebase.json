@@ -23,34 +23,42 @@
       "tsconfig.json"
     ]
   },
-  "hosting": [{
-    "target": "website",
-    "public": "apps/website/public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [{
-      "source": "/api{,/**}",
-      "function": "api"
-    }]
-  }, {
-    "target": "admin",
-    "public": "apps/admin/dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [{
-      "source": "/api{,/**}",
-      "function": "api"
-    }, {
-      "source": "**",
-      "destination": "/index.html"
-    }]
-  }],
+  "hosting": [
+    {
+      "target": "admin",
+      "public": "apps/admin/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/api{,/**}",
+          "function": "api"
+        },
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    },
+    {
+      "target": "website",
+      "public": "apps/website/dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "/api{,/**}",
+          "function": "api"
+        }
+      ]
+    }
+  ],
   "emulators": {
     "functions": {
       "port": 5001

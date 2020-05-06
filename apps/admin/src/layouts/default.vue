@@ -23,28 +23,15 @@
             <v-list-item-title class="menu-text">{{ item.text }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-
-        <!-- <v-subheader class="mt-4 overline">System</v-subheader>
-        <v-list-item
-          v-for="item in itemsSystem"
-          :key="item.text"
-          :to="item.link"
-          :exact="item.exact"
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title class="menu-text">{{ item.text }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item> -->
       </v-list>
 
-      <div class="nav-footer">
-        <v-btn small href="https://firelayer.io/docs" target="_blank" text>Docs</v-btn>
-        <v-btn small href="https://github.com/firelayer/starter-template" target="_blank" text>Feedback</v-btn>
-        <v-btn small href="https://github.com/firelayer/starter-template" target="_blank" text>Support</v-btn>
-      </div>
+      <template v-slot:append>
+        <div class="pa-2 text-center">
+          <v-btn small href="https://firelayer.io/docs" target="_blank" text>Docs</v-btn>
+          <v-btn small href="https://github.com/firelayer/starter-template" target="_blank" text>Feedback</v-btn>
+          <v-btn small href="https://github.com/firelayer/starter-template" target="_blank" text>Support</v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
 
     <!-- Toolbar -->
@@ -81,9 +68,6 @@ export default {
       { icon: 'mdi-view-dashboard-outline', text: 'Dashboard', link: '/dashboard', exact: true },
       { icon: 'mdi-account-multiple-outline', text: 'Users', link: '/users' }
     ]
-    // itemsSystem: [
-    //   { icon: 'mdi-tune', text: 'Settings', link: '/settings' }
-    // ]
   })
 }
 </script>
@@ -122,20 +106,5 @@ export default {
   .menu-text {
     font-weight: bold;
   }
-}
-
-.v-list {
-  padding-bottom: 64px;
-}
-
-.nav-footer {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  padding: 14px;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 </style>
