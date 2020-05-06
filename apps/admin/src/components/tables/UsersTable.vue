@@ -3,7 +3,7 @@
     <v-card-title>
       Search
       <v-spacer></v-spacer>
-      <v-btn :loading="isLoading" icon small @click="getUsers(true)">
+      <v-btn :disabled="isLoading" icon small @click="getUsers(true)">
         <v-icon>mdi-refresh</v-icon>
       </v-btn>
     </v-card-title>
