@@ -4,11 +4,18 @@
 
 <br/>
 
-Website [https://firelayer-starter-template.web.app](https://firelayer-starter-template.web.app)
+Landing [https://firelayer-starter-template.web.app](https://firelayer-starter-template.web.app)
 
-API [https://firelayer-starter-template.web.app/api](https://firelayer-starter-template.web.app/api)
 
-## Guide
+### Firelayer Documentation
+
+[Documentation Website](https://firelayer.io/docs)
+
+## Installation Guide
+You can use an existing Firebase project or create a new project on the [Firebase Console](https://console.firebase.google.com).
+
+Follow the guide on preparing a Firebase project for Firelayer
+**[Setting up Firebase - Guide](https://firelayer.io/docs/setting-up-firebase)**
 
 #### Starting in a new project
 ```sh
@@ -20,6 +27,39 @@ firelayer init new-project -t starter
 firelayer add:template starter
 ```
 
-### Firelayer Documentation
+## Content
 
-[Documentation Website](https://firelayer.io)
+#### [`apps/functions` Cloud Functions](/apps/functions/README.md)
+- Express API
+- User management
+- Triggers examples
+- Scheduled jobs examples
+
+#### [`apps/admin` Administration Dashboard](/apps/admin/README.md)
+- Firebase Users Management
+- Send auth emails with SendGrid
+- Vue & Vuetify Components
+
+#### [`apps/website` Landing Page](/apps/website/README.md)
+- Sign In, register, verify email and reset password
+- User Dashboard
+- Localization
+- Vue with Nuxt & Vuetify Components
+
+
+## Development
+
+Starter template is organized as a monorepo using [Lerna](https://lerna.js.org/) and yarn workspaces. Useful scripts include:
+
+#### `yarn bootstrap`
+> Installs package dependencies and links packages together - using lerna and yarn workspaces
+
+#### `yarn build`
+> Cleans the previous builds and starts building on all sub packages - using lerna run build
+
+#### `yarn dev`
+> Starts the dev mode on all sub packages - using lerna run dev
+
+## License
+
+Firelayer is open-sourced software licensed under the [MIT license](https://github.com/firelayer/firelayer/blob/master/LICENSE).
