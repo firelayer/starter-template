@@ -27,6 +27,25 @@ firelayer init new-project -t starter
 firelayer add:template starter
 ```
 
+### Quick Start
+> After Install
+
+To start run **`yarn dev`** or **`npm run dev`** and the three applications should be ready on:
+Admin - http://localhost:8081
+Landing - http://localhost:8080
+Functions - http://localhost:5000/api/api
+> ports may change if already in use by other services
+
+### Adding an Administrator
+1. Follow the steps on [Getting Started to add a Service Account key](https://firelayer.io/docs/getting-started#get-the-firebase-service-account-key) to your project so you can run Firelayer CLI helpers.
+
+2. If you don't have any users on this Firebase Project you can always create a new one using the Landing Page on http://localhost:8080 or on the Firebase Console.
+
+3. Add Administration privileges to user:
+`firelayer auth -u emailofuser@example.com --set-admin`
+
+And now you can login on the administration dashboard - http://localhost:8081
+
 ## Content
 
 #### [`apps/functions` Cloud Functions](/apps/functions/README.md)
