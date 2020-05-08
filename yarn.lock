@@ -1142,10 +1142,10 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.39.tgz#32ce49e0ba54d831750afde59e32889bef444fd3"
   integrity sha512-V5oQjtYxHlEpWdQr68ZFo8T+3NVccrTieRy8RnzYIasCeptxOxwYUG0cAAKmalgrrrfRJdXup8h5ybi3XSW9Hw==
 
-"@firelayer/cli@^1.0.0-alpha.15":
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/@firelayer/cli/-/cli-1.0.0-alpha.15.tgz#17aba7dd083f5117227464b62a9d37bbbb9c102b"
-  integrity sha512-VoOAa43wqcrxiBqvn8eK8Az5we57ZoV4ttfiOLQVV12i+p0YD05fwpdpyjDwKjRQfSWE6PfO/DJWcmECPi8+XQ==
+"@firelayer/cli@^1.0.0-alpha.16":
+  version "1.0.0-alpha.16"
+  resolved "https://registry.yarnpkg.com/@firelayer/cli/-/cli-1.0.0-alpha.16.tgz#f4ac6e3b74a812a6132b6ecfdb27a0b854e97a0d"
+  integrity sha512-RVrZvnDpyjqyjjL5/04XsbVxDavmvGrN1ch1H1VAvJ/Pe9+C8BH90v4JDrgrZWLaQd59IBx82Aqih0Wid52OFw==
   dependencies:
     "@firelayer/core" "^1.0.0-alpha.15"
     "@oclif/command" "^1"
