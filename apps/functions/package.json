@@ -16,7 +16,7 @@
     "shell": "npm run build && firebase functions:shell"
   },
   "dependencies": {
-    "@firelayer/core": "^1.0.0-alpha.13",
+    "@firelayer/core": "^1.0.0-alpha.14",
     "@sendgrid/mail": "^7.1.0",
     "express": "^4.17.1",
     "firebase-admin": "^8.10.0",

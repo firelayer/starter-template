@@ -1142,12 +1142,12 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.39.tgz#32ce49e0ba54d831750afde59e32889bef444fd3"
   integrity sha512-V5oQjtYxHlEpWdQr68ZFo8T+3NVccrTieRy8RnzYIasCeptxOxwYUG0cAAKmalgrrrfRJdXup8h5ybi3XSW9Hw==
 
-"@firelayer/cli@^1.0.0-alpha.13":
-  version "1.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/@firelayer/cli/-/cli-1.0.0-alpha.13.tgz#098bf977c53a53381c007d0abbae4f39a35448dd"
-  integrity sha512-0uXluCbtzez3CySE60OPQfQXsVFSQSK3uPDDXnHem9VrT3DF3JIH5n8ONvSOQ0GnDULMx+HpCCZrhWevXIz3cA==
+"@firelayer/cli@^1.0.0-alpha.14":
+  version "1.0.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/@firelayer/cli/-/cli-1.0.0-alpha.14.tgz#698c23711dd7877155f4ec09e53d72fa5581ec49"
+  integrity sha512-JoEB/XxioQOvbBAEDezfAiA3KatUIR+xZWrCO3ZBz5GKWPGzLCH0kxNki9AgxsB/6uD3s4qb3naFI++1oob3/w==
   dependencies:
-    "@firelayer/core" "^1.0.0-alpha.13"
+    "@firelayer/core" "^1.0.0-alpha.14"
     "@oclif/command" "^1"
     "@oclif/config" "^1"
     "@oclif/plugin-help" "^2"
@@ -1166,13 +1166,10 @@
     shelljs "^0.8.3"
     tslib "^1"
 
-"@firelayer/core@^1.0.0-alpha.13":
-  version "1.0.0-alpha.13"
-  resolved "https://registry.yarnpkg.com/@firelayer/core/-/core-1.0.0-alpha.13.tgz#0e0abf690ac1a46b9790b3b87324240ef2cb8b31"
-  integrity sha512-lv+jQGOUmBm9oGN25w/yv2ebPnyLQ9PL6gaJMzZaVyXZwnA4fs/w7/Vz9b54IetHsAPDLlhyRR5+qOZ4XB483A==
-  dependencies:
-    firebase-admin "^8.11.0"
-    firebase-functions "^3.6.0"
+"@firelayer/core@^1.0.0-alpha.14":
+  version "1.0.0-alpha.14"
+  resolved "https://registry.yarnpkg.com/@firelayer/core/-/core-1.0.0-alpha.14.tgz#0298ad38f69891aca797013f88fdf2ea87c6c3ad"
+  integrity sha512-zTMOaeyNIPHy1M4Mto1n04NXYFOiNd9AEtnUwD5HLSe7ysmRd1iiNkB/m/q3x1IxzIOvnIJ7sXJI9msfw+qVhw==
 
 "@firelayer/eslint-config-vue@^1.3.3":
   version "1.3.3"
@@ -7047,7 +7044,7 @@ findup-sync@^3.0.0:
     micromatch "^3.0.4"
     resolve-dir "^1.0.1"
 
-firebase-admin@^8.10.0, firebase-admin@^8.11.0:
+firebase-admin@^8.10.0:
   version "8.11.0"
   resolved "https://registry.yarnpkg.com/firebase-admin/-/firebase-admin-8.11.0.tgz#6292474c1270731655bc7c54a16499d54012fd0b"
   integrity sha512-DapjZBeilXIDJShlWIvcgPkX6HhOHCs5C9972ZDNpfm0aSSgWuwgVQz9vs9iTk0u+oQuqRjxcHveZki0qaHJ2w==

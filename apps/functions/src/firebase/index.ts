@@ -19,7 +19,4 @@ export const realtime = admin.database
 export const timestamp = admin.firestore.Timestamp.now
 export const { serverTimestamp } = admin.firestore.FieldValue
 
-export { User } from '@firelayer/core/lib/firebase/user'
-export { Firemodel } from '@firelayer/core/lib/firebase/firestore/models/firemodel'
-
-// export { Firemodel, User } from '@firelayer/core/lib/firebase'
+export { User, Firemodel } from '@firelayer/core'

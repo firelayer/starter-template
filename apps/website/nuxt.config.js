@@ -124,7 +124,7 @@ export default {
   },
 
   sitemap: {
-    hostname: config.firebase.authDomain,
+    hostname: `https://${config.firebase.authDomain}`,
     gzip: true,
     exclude: [
       '/_static/'
