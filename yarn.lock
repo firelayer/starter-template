@@ -1142,10 +1142,10 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.40.tgz#5215554d2ce1d87329241e8b08ac96e4dd1994ea"
   integrity sha512-f0jc79nQvwcwhOGFAD9b5K55Cb/a0A7LKBdRyQgVFLBGm+MuSFF5Rm/5Ll8/u72hJhbdICQj+xYl2uIuCMdXFQ==
 
-"@firelayer/cli@^1.0.0-alpha.16":
-  version "1.0.0-alpha.17"
-  resolved "https://registry.yarnpkg.com/@firelayer/cli/-/cli-1.0.0-alpha.17.tgz#1fa00e9bf2efcfa08628283b2dd18747673d2400"
-  integrity sha512-LN2zveTjoNEODtbaznw1afBez+zEzZTwP5iy4NwpMrDED8C9h1j4Z2apZrAfSxp1wVsBpP4kyDB6iGjx6yp9Qg==
+"@firelayer/cli@^1.0.0-alpha.18":
+  version "1.0.0-alpha.18"
+  resolved "https://registry.yarnpkg.com/@firelayer/cli/-/cli-1.0.0-alpha.18.tgz#5ff5032d704a262c47ff079ce098d2ea825a6bb5"
+  integrity sha512-6gq+y3MoL5xgAf0Yswk4hK3IUlCMfbE4ZHlbVZSAbveBrvRAzORWh8TR2CPZEJLGCwADSj4Gg512P8uLb83lVw==
   dependencies:
     "@firelayer/core" "^1.0.0-alpha.15"
     "@oclif/command" "^1"
@@ -6783,7 +6783,7 @@ fecha@^2.3.3:
   resolved "https://registry.yarnpkg.com/fecha/-/fecha-2.3.3.tgz#948e74157df1a32fd1b12c3a3c3cdcb6ec9d96cd"
   integrity sha512-lUGBnIamTAwk4znq5BcqsDaxSmZ9nDVJaij6NvRt/Tg4R69gERA+otPKbS86ROw9nxVMw2/mp1fnaiWqbs6Sdg==
 
-"fibers@^4.0.0 || ^5.0.0":
+"fibers@^4.0.0 || ^5.0.0", fibers@^5.0.0:
   version "5.0.0"
   resolved "https://registry.yarnpkg.com/fibers/-/fibers-5.0.0.tgz#3a60e0695b3ee5f6db94e62726716fa7a59acc41"
   integrity sha512-UpGv/YAZp7mhKHxDvC1tColrroGRX90sSvh8RMZV9leo+e5+EkRVgCEZPlmXeo3BUNQTZxUaVdLskq1Q2FyCPg==
