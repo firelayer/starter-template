@@ -31,9 +31,9 @@ firelayer add:template starter
 > After Install
 
 To start run **`yarn dev`** or **`npm run dev`** and the three applications should be ready on:
-Admin - http://localhost:8081
-Landing - http://localhost:8080
-Functions - http://localhost:5000/api/api
+- Admin - http://localhost:8081
+- Website - http://localhost:8080
+- Functions - http://localhost:5000/api/api
 > ports may change if already in use by other services
 
 ### Adding an Administrator
