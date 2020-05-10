@@ -4,12 +4,11 @@
   "private": true,
   "scripts": {
     "start": "nuxt start",
-    "build": "nuxt build && yarn generate",
+    "build": "nuxt generate",
     "dev": "nuxt",
     "clean": "rimraf .nuxt dist",
     "http": "cd dist && npx http-server",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.vue --report-unused-disable-directives",
-    "generate": "nuxt generate"
+    "lint": "eslint --ignore-path .gitignore --ext .js,.vue --report-unused-disable-directives ."
   },
   "dependencies": {
     "@firelayer/core": "^1.0.0-alpha.15",

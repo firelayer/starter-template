@@ -20,17 +20,17 @@ export default {
       default: null
     }
   },
+  data() {
+    return {
+      pageNotFound: 'Page Not Found',
+      otherError: 'An Error Occurred'
+    }
+  },
   head() {
     const title = this.error.statusCode === 404 ? this.pageNotFound : this.otherError
 
     return {
       title
-    }
-  },
-  data() {
-    return {
-      pageNotFound: 'Page Not Found',
-      otherError: 'An Error Occurred'
     }
   }
 }

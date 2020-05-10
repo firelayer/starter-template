@@ -5,6 +5,7 @@
   "scripts": {
     "build": "vue-cli-service build",
     "dev": "npm run serve",
+    "clean": "rimraf dist",
     "lint": "eslint --ignore-path .gitignore --ext .js,.vue --report-unused-disable-directives .",
     "serve": "vue-cli-service serve --port 8081"
   },
@@ -30,6 +31,7 @@
     "fibers": "^5.0.0",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "rimraf": "^3.0.2",
     "vue-cli-plugin-vuetify": "^2.0.3",
     "vue-template-compiler": "^2.6.11",
     "vuetify-loader": "^1.4.3"

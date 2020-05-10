@@ -26,9 +26,13 @@ const searchUser = async ({ commit, dispatch, state }, query) => {
     const user = await userSearch.get()
 
     commit('LOADED', [user])
+
+    return user
   } catch (error) {
     commit('LOADED', [])
   }
+
+  return null
 }
 
 const nextPage = async ({ commit, dispatch, state }) => {

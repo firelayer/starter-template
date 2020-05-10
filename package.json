@@ -20,7 +20,7 @@
     "dev:functions": "firelayer run \"cd apps/functions && npm run dev\"",
     "dev:website": "firelayer run \"cd apps/website && npm run dev\"",
     "emulators": "firelayer run \"firebase emulators:start\"",
-    "lint": "lerna run lint --parallel",
+    "lint": "lerna run lint",
     "reset": "lerna clean --yes && npm run clean",
     "test": "lerna run test --parallel"
   },
