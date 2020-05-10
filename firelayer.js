@@ -6,12 +6,6 @@
 | Starter - Default template for `firelayer init`
 |
 */
-export default async function(installer) {
-  const guide = 'https://firelayer.io/templates/starter'
-
-  // post install stuff
-
-  return {
-    guide
-  }
+module.exports = async function({ chalk, open, logger, prompt, targetDir }) {
+  open('https://firelayer.io/templates/starter')
 }
