@@ -5,9 +5,6 @@
   "targets": {
     "firelayer-templates": {
       "hosting": {
-        "website": [
-          "firelayer-starter-template"
-        ],
         "admin": [
           "firelayer-starter-admin"
         ]

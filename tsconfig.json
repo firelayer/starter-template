@@ -9,7 +9,6 @@
   },
   "exclude": [
     "**/dist",
-    "boilerplate",
     "node_modules",
     "**/node_modules"
   ]

@@ -4,9 +4,6 @@
 
 <br/>
 
-Landing [https://firelayer-starter-template.web.app](https://firelayer-starter-template.web.app)
-
-
 ### Firelayer Documentation
 
 [Documentation Website](https://firelayer.io/docs)
@@ -27,19 +24,25 @@ firelayer init new-project -t starter
 firelayer add:template starter
 ```
 
+### Adding a landing page to this template
+If you wish to add a landing website. You can do so by adding the landing template:
+```sh
+firelayer add:template landing
+```
+
 ### Quick Start
 > After Install
 
 To start run **`yarn dev`** or **`npm run dev`** and the three applications should be ready on:
 - Admin - http://localhost:8081
-- Website - http://localhost:8080
 - Functions - http://localhost:5000/api/api
 > ports may change if already in use by other services
 
 ### Adding an Administrator
 1. Follow the steps on [Getting Started to add a Service Account key](https://firelayer.io/docs/getting-started#get-the-firebase-service-account-key) to your project so you can run Firelayer CLI helpers.
 
-2. If you don't have any users on this Firebase Project you can always create a new one using the Landing Page on http://localhost:8080 or on the Firebase Console.
+2. If you don't have any users on this Firebase Project you can always create a new one using the firelayer CLI or on the Firebase Console.
+`firelayer auth:add -u emailofuser@example.com -p password123`
 
 3. Add Administration privileges to user:
 `firelayer auth -u emailofuser@example.com --set-admin`
@@ -58,13 +61,6 @@ And now you can login on the administration dashboard - http://localhost:8081
 - Firebase Users Management
 - Send auth emails with SendGrid
 - Vue & Vuetify Components
-
-#### [`apps/website` Landing Page](/apps/website/README.md)
-- Sign In, register, verify email and reset password
-- User Dashboard
-- Localization
-- Vue with Nuxt & Vuetify Components
-
 
 ## Development
 
