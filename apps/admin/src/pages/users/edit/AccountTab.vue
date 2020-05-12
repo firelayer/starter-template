@@ -28,29 +28,32 @@
               max-height="100"
             ></v-img>
             <div class="user-form">
-              <v-text-field v-model="user.data.displayName" label="Display name" placeholder="name"></v-text-field>
-              <v-text-field
-                v-model="user.data.phoneNumber"
-                label="Phone Number"
-                placeholder="phone"
-              ></v-text-field>
-              <v-text-field v-model="user.data.email" label="Email" hide-details></v-text-field>
+              <v-form ref="form" v-model="isFormValid" lazy-validation>
+                <v-text-field v-model="user.data.displayName" label="Display name" placeholder="name"></v-text-field>
+                <v-text-field
+                  v-model="user.data.phoneNumber"
+                  label="Phone Number"
+                  placeholder="+12345678"
+                  :rules="[rules.phone]"
+                ></v-text-field>
+                <v-text-field v-model="user.data.email" label="Email" hide-details></v-text-field>
 
-              <div class="d-flex align-center">
-                <v-checkbox v-model="user.data.emailVerified" dense label="Email Verified"></v-checkbox>
-                <v-btn
-                  v-if="!user.data.emailVerified"
-                  :loading="isLoadingSendVerification"
-                  class="ml-4"
-                  @click="_sendVerificationEmail"
-                >
-                  <v-icon left small>mdi-email</v-icon>Send Verification Email
-                </v-btn>
-              </div>
+                <div class="d-flex align-center">
+                  <v-checkbox v-model="user.data.emailVerified" dense label="Email Verified"></v-checkbox>
+                  <v-btn
+                    v-if="!user.data.emailVerified"
+                    :loading="isLoadingSendVerification"
+                    class="ml-4"
+                    @click="_sendVerificationEmail"
+                  >
+                    <v-icon left small>mdi-email</v-icon>Send Verification Email
+                  </v-btn>
+                </div>
 
-              <div class="mt-2">
-                <v-btn :loading="isLoadingSave" color="primary" @click="save">Save</v-btn>
-              </div>
+                <div class="mt-2">
+                  <v-btn :loading="isLoadingSave" color="primary" @click="save">Save</v-btn>
+                </div>
+              </v-form>
             </div>
           </div>
         </v-card-text>
@@ -212,6 +215,13 @@ export default {
       deleteDialog: false,
       disableDialog: false,
 
+      // form
+      isFormValid: true,
+      rules: {
+        required: (value) => (value && Boolean(value)) || 'Required',
+        phone: (value) => !value || /^\+[1-9]\d{4,14}$/.test(value) || 'Invalid phone number format'
+      },
+
       isLoadingSave: false,
       isLoadingDisabled: false,
       isLoadingDelete: false,
@@ -247,6 +257,8 @@ export default {
       'revokeTokens'
     ]),
     async save() {
+      if (!this.$refs.form.validate()) return
+
       this.isLoadingSave = true
 
       const { displayName, email, emailVerified, phoneNumber } = this.user.data
@@ -255,7 +267,7 @@ export default {
         displayName,
         email,
         emailVerified,
-        phoneNumber
+        phoneNumber: phoneNumber || undefined
       })
 
       this.isLoadingSave = false
