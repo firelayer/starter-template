@@ -143,8 +143,18 @@ export default {
       } catch (error) {
         const { code, message } = error
 
+        switch (code) {
+        case 'auth/operation-not-allowed':
+          this.errorMessages = 'Please enable user/password authentication method on the Firebase Console.'
+          break
+        case 'auth/user-disabled':
+          this.errorMessages = 'This account is disabled, please contact support for more information.'
+          break
+        default:
+          this.errorMessages = 'Email / Password combination invalid.'
+        }
+
         this.error = true
-        this.errorMessages = 'Email / Password combination invalid.'
       }
 
       this.isLoading = false
