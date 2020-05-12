@@ -2,6 +2,29 @@ import { auth, realtime } from '../firebase'
 import store from '../store'
 import router from '../router'
 
+async function onUserUpdate(user) {
+  const { name,  meta: { redirectIfAuth } } = router.currentRoute
+  const token = await user.getIdTokenResult(true)
+  const { claims } = token
+
+  store.commit('app/SET_ISAPPREADY', false)
+
+  if (!claims.admin) {
+    if (name !== 'unauthorized') router.push({ name: 'unauthorized' })
+  } else {
+    if (redirectIfAuth) {
+      router.push({ name: 'dashboard' })
+    }
+
+    store.commit('app/INITIALIZED', { user: { uid: user.uid, email: user.email }, claims })
+  }
+
+  setTimeout(() => {
+    store.commit('app/SET_ISAPPREADY', true)
+    hideLoading()
+  }, 100)
+}
+
 /*
 |---------------------------------------------------------------------
 | Listen to Firebase authentication changes
@@ -15,7 +38,7 @@ import router from '../router'
 |
 */
 auth().onAuthStateChanged(async (user) => {
-  const { name,  meta: { requiresAuth, redirectIfAuth } } = router.currentRoute
+  const { name,  meta: { requiresAuth } } = router.currentRoute
 
   if (name === 'error') {
     store.commit('app/SET_ISAPPREADY', true)
@@ -32,28 +55,11 @@ auth().onAuthStateChanged(async (user) => {
     // listen to changes on the user claims to trigger a token refresh
     const metadataRef = realtime().ref(`_users/${user.uid}`)
 
-    metadataRef.on('value', async (snapshot) => {
-      const token = await user.getIdTokenResult(true)
-      const { claims } = token
-
-      store.commit('app/SET_ISAPPREADY', false)
-
-      if (!claims.admin) {
-        if (name !== 'unauthorized') router.push({ name: 'unauthorized' })
-      } else {
-        if (redirectIfAuth) {
-          router.push({ name: 'dashboard' })
-        }
-
-        store.commit('app/INITIALIZED', { user: { uid: user.uid, email: user.email }, claims })
-      }
-
-      setTimeout(() => {
-        store.commit('app/SET_ISAPPREADY', true)
-        hideLoading()
-      }, 100)
-    }, (err) => {
+    metadataRef.on('value', () => onUserUpdate(user), (err) => {
+      console.log(('If the Realtime Database rules haven\'t been deployed the user can\'t listen to changes on claims.'))
       console.log(`Encountered error: ${err}`)
+
+      onUserUpdate(user)
     })
   } else {
     if (requiresAuth) {
