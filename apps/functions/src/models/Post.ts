@@ -5,7 +5,7 @@ export class Post extends Firemodel {
     super(id)
   }
 
-  get path() {
+  get collection() {
     return db().collection('posts')
   }
 }

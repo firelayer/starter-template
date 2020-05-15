@@ -10,7 +10,7 @@ export class Post extends Firemodel {
     super(id)
   }
 
-  get path() {
+  get collection() {
     // REPLACE _ with correct path to collection
     return db().collection('_')
   }
