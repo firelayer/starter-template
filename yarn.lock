@@ -509,10 +509,10 @@
   resolved "https://registry.yarnpkg.com/@firebase/webchannel-wrapper/-/webchannel-wrapper-0.2.40.tgz#5215554d2ce1d87329241e8b08ac96e4dd1994ea"
   integrity sha512-f0jc79nQvwcwhOGFAD9b5K55Cb/a0A7LKBdRyQgVFLBGm+MuSFF5Rm/5Ll8/u72hJhbdICQj+xYl2uIuCMdXFQ==
 
-"@firelayer/core@^1.0.0-alpha.15":
-  version "1.0.0-alpha.15"
-  resolved "https://registry.yarnpkg.com/@firelayer/core/-/core-1.0.0-alpha.15.tgz#2b93862bbb53ad9c57bcea15ff55dde90bee7dd2"
-  integrity sha512-iF0zFc6O2OrBrdFhmc1f/0o4hocx+EzOSYciH/U++U1xK2p2WD21AmuUhjZvW+PVm5SXYmI6jPvTeqpKdvlZ0w==
+"@firelayer/core@^1.0.0-alpha.22":
+  version "1.0.0-alpha.22"
+  resolved "https://registry.yarnpkg.com/@firelayer/core/-/core-1.0.0-alpha.22.tgz#aa7945298260363d529d5caef716251df04e1993"
+  integrity sha512-k7No9nP2VAR3vvrI0l9sLYu4Pfx8seVauUhPLShDiS2UEtEfmZfOZ0hfn7YNFt83z/kcjyFuWdmKgvT7wuZvXA==
   dependencies:
     firebase-admin "8.11.0"
     firebase-functions "^3.6.0"
