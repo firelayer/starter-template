@@ -7,7 +7,7 @@
           <v-list-item-title>
             <div>
               <div class="title font-weight-bold">Firelayer Admin</div>
-              <div class="overline">1.0.0 Valiant | Alpha</div>
+              <div class="overline">1.0.0 Valiant</div>
             </div>
           </v-list-item-title>
         </v-list-item-content>
