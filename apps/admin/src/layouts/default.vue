@@ -1,7 +1,7 @@
 <template>
   <div class="main-layout">
     <!-- Navigation -->
-    <v-navigation-drawer v-model="drawer" app floating class="elevation-1">
+    <v-navigation-drawer v-model="drawer" app class="elevation-1">
       <v-list-item>
         <v-list-item-content>
           <v-list-item-title>
@@ -35,14 +35,12 @@
     </v-navigation-drawer>
 
     <!-- Toolbar -->
-    <v-app-bar app flat color="transparent pa-1">
-      <v-card class="flex-grow-1 d-flex pa-1 mt-2">
-        <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-spacer></v-spacer>
-        <div>
-          <UserMenu></UserMenu>
-        </div>
-      </v-card>
+    <v-app-bar app>
+      <v-app-bar-nav-icon class="hidden-lg-and-up" @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-spacer></v-spacer>
+      <div>
+        <UserMenu></UserMenu>
+      </div>
     </v-app-bar>
 
     <v-content>

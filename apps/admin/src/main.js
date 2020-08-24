@@ -9,7 +9,6 @@ import vuetify from './plugins/vuetify'
 import '../public/style/critical.css'
 import './plugins/vue-shortkey'
 import './plugins/filters'
-import './plugins/apexcharts'
 import './middlewares'
 
 Vue.prototype.$moment = moment
