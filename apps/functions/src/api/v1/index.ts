@@ -1,10 +1,11 @@
-import * as express from 'express'
+import { Router } from 'express'
 import hasPermission, { LEVELS } from './middlewares/hasPermission'
 import auth from './middlewares/auth'
 import exampleWebhook from './webhooks/example'
 import usersController from './controllers/users'
 
-const router = express.Router()
+// @ts-ignore
+const router = Router()
 
 /*
 |---------------------------------------------------------------------

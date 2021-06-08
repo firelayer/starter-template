@@ -11,14 +11,14 @@
   },
   "dependencies": {
     "axios": "^0.19.0",
-    "firebase": "^7.14.0",
+    "firebase": "8.6.5",
     "jsoneditor": "^8.6.1",
     "lodash": "^4.17.15",
     "moment": "2.24.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vue-shortkey": "^3.1.7",
-    "vuetify": "^2.2.4",
+    "vuetify": "2.5.3",
     "vuex": "^3.1.2"
   },
   "devDependencies": {
@@ -27,12 +27,11 @@
     "@vue/cli-service": "^4.3.1",
     "deepmerge": "^4.2.2",
     "eslint": "^6.8.0",
-    "fibers": "^5.0.0",
     "rimraf": "^3.0.2",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "vue-cli-plugin-vuetify": "^2.0.3",
+    "sass": "1.32.5",
+    "sass-loader": "^10.1.1",
+    "vue-cli-plugin-vuetify": "^2.0.7",
     "vue-template-compiler": "^2.6.11",
-    "vuetify-loader": "^1.4.3"
+    "vuetify-loader": "^1.7.1"
   }
 }

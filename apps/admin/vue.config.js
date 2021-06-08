@@ -8,10 +8,10 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        prependData: '@import \'~@/assets/styles/vuetify/_index.scss\''
+        additionalData: '@import \'~@/assets/styles/vuetify/_index.scss\''
       },
       scss: {
-        prependData: '@import \'~@/assets/styles/vuetify/_index.scss\';'
+        additionalData: '@import \'~@/assets/styles/vuetify/_index.scss\';'
       }
     }
   },
@@ -20,7 +20,7 @@ module.exports = {
     progress: false,
     proxy: {
       '/api': {
-        target: `http://localhost:5000/${config.firebase.projectId}/api`
+        target: `http://localhost:5000/${config.firebase.projectId}/us-central1/api`
       }
     }
   }

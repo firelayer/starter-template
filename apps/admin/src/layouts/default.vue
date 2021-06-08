@@ -43,13 +43,13 @@
       </div>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-container fill-height fluid>
         <v-layout>
           <slot></slot>
         </v-layout>
       </v-container>
-    </v-content>
+    </v-main>
   </div>
 </template>
 
